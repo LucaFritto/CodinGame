@@ -48,56 +48,5 @@ class Solution
             counter=0;
         }
         Console.WriteLine(money);
-        /*string[] inputs = Console.ReadLine().Split(' ');
-        int L = int.Parse(inputs[0]);
-        //Console.WriteLine(L);
-        int C = int.Parse(inputs[1]);
-        //Console.WriteLine(C);
-        int N = int.Parse(inputs[2]);
-        //Console.WriteLine(N);
-        long money = 0;
-        int group = 0;
-        int postiVuoti = L;
-        int[] groups = new int[N];
-        for (int i = 0; i < N; i++)
-        {
-            groups[i] = int.Parse(Console.ReadLine());
-            if (postiVuoti < groups[i]) {
-                C--;
-                postiVuoti = L;
-            }  
-            if (C == 0)
-                break;
-            money+=groups[i];
-            postiVuoti-=groups[i]; 
-        }
-        if(money < L) {
-            C--;
-            postiVuoti = L;
-        }
-        int difference = (int.Parse(inputs[1])-C);
-        long total = money; 
-        while (C-difference >= 0) {
-            total+=money;
-            if (postiVuoti*2>L) {
-                C -= (difference+1);
-                postiVuoti = (L*2)-((L-postiVuoti)*2);
-                continue;
-            }
-            C -= difference;
-        }
-        money = total;
-        for(int i=0;i<C;i++){
-            while (postiVuoti >= groups[group]) {
-                money+=groups[group];
-                postiVuoti-=groups[group];
-                group++;
-                if (group == N)
-                    break;
-            }
-            postiVuoti=L;
-        }
-            
-        Console.WriteLine(money);*/
     }
 }
