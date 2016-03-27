@@ -1,0 +1,70 @@
+The Goal
+The goal for your program is to make a motorbike jump across a gap and land on a platform then stop.
+  Rules
+
+The platform is located on the otherside of a gap in the road above a chasm. The lengths of the road, gap and platform are measured in cells.
+ 
+
+At the start of the program, you are given:
+
+    The variable road: the length of the road before the gap.
+    The variable gap: the length of the gap.
+    The variable platform: the length of the platform.
+
+At the start of each game turn, the motorbike gives you:
+
+    The variable speed: its current speed.
+    The variable coordX: its position on the road.
+
+The motorbike's initial position is coordX = 0. It always moves in a straight line. At the end of each turn, it moves forward a number of spaces equal to its speed (speed). For example, if coordX = 1 and speed = 3, coordX will be 4 at the next turn. The bike can start with any speed, including being at a stop.
+ 
+
+Before the end of the turn, you must output one of the following commands:
+
+    SPEED: increases the speed of the motorbike by 1 (+1 to the speed variable).
+    SLOW: decreases the speed of the motorbike by 1 (-1 to the speed variable).
+    JUMP: makes the motorbike jump.
+    WAIT: does nothing (the motorbike keeps the same speed).
+
+ 
+Victory Conditions
+The mission is a success if the bike comes at a stop on the landing platform.
+ 
+Lose Conditions
+The bike falls or did not get to the platform in less than 150 turns.
+  Example
+Initial state
+ 
+The motorbike starts with a speed of 2 , the bridge is of length 4 , the gap is of length 2 and the landing platform is of length 5.
+SPEED
+Accelerate to have enough momentum to jump the gap.
+JUMP
+The bike moved forward 3 spaces.
+SLOW
+Stop the bike by slowing down.
+ 
+ 
+ 
+ 
+  Note
+Don’t forget to run the tests by launching them from the “Test cases” window.
+Beware: the tests used to calculate your score are slightly different to those provided to you to avoid hard-coded solutions.
+  Game Input
+Initialization input
+Line 1: road the length of the road before the gap.
+Line 2: gap the length of the gap.
+Line 3: platform the length of the landing platform.
+Input for one game turn
+Line 1: speed the motorbike's speed.
+Line 2: coordX the position on the road of the motorbike.
+Output for one game turn
+A single line containing one of 4 keywords: SPEED SLOW JUMP WAIT .
+Constraints
+The initial position of the motorbike is always coordX = 0.
+0 ≤ speed < 50
+0 ≤ coordX < 100
+1 ≤ road ≤ 100
+1 ≤ gap ≤ 100
+1 ≤ platform ≤ 100
+Response time for one game turn ≤ 150ms
+The program must first read the initialization data from standard input. Then, within an infinite loop, read the data from the standard input related to the motorbike's current state and provide to the standard output the desired instructions.
